@@ -14,14 +14,13 @@ CREATE TABLE cases (
 
 DROP TABLE IF EXISTS unemployment CASCADE;
 CREATE TABLE unemployment (
-	FIPStxt INT NOT NULL FOREIGN KEY,
+	FIPStxt INT PRIMARY KEY NOT NULL,
 	Civilian_labor_force_2019 INT NOT NULL, 
 	Employed_2019 INT NOT NULL,
 	Unemployed_2019 INT NOT NULL,
 	Unemployment_rate_2019 FLOAT(2) NOT NULL,
 	Median_Household_Income_2018 FLOAT(2) NOT NULL,
 	Med_HH_Income_Percent_of_State_Total_2018 FLOAT(2) NOT NULL
-	CONSTRAINT pk_unemployment PRIMARY KEY (FIPStxt)
 );
 
 --- Query tables to check columns
